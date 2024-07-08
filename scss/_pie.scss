@@ -1,0 +1,20 @@
+footer{
+    grid-area: footer;
+}
+
+.pie{
+    @include disFlex (flex,wrap);
+    background-color: #090a0a;
+    color: #f0edede0;
+    justify-content: space-around;
+    align-items: center;
+    .m-img{
+        width: 70px;
+        padding-left: 5px;
+    }
+    .btn-wsp{
+        width: 27px;
+        bottom: 5px;
+        right: 5px;
+    }
+}

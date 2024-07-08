@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    grid-area: header;
+    .cont-menu{
+        width: 100%;
+        display: flex;
+        background-color: $color-menu-background;
+        .w-img{
+            @include padWid (5px,120px);
+            transition-duration: 0.5s;
+            transition-delay: 0s;
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+        .menu{
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+            &-current{
+                text-decoration: underline;
+                color: $color-text-menu;
+            }
+            &-other{
+                text-decoration: none;
+                color:$color-text-menu;
+            }
+            &:li{
+                list-style: none;
+            }
+        }
+    }
+    .nav-p{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+
+
+
+

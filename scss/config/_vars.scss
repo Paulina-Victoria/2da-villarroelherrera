@@ -1,0 +1,30 @@
+//Fonts
+$font-principal: "Montserrat", sans-serif;
+
+//Colors
+$color-primary-title: #f0edede0;
+$color-primary: #28d6f1;
+$color-button-background: #7cc;
+$color-button-border: #5bc2c2;
+$color-button-background-hover: #52bebe;
+$color-button-border-hover: #8ad3d3;
+$color-text: #212529;
+$color-text-hover: #3227cc;
+$color-text-menu: #f6f6f8;
+$color-menu-background: #090a0a;
+
+//Images
+$background-image-index: url('../assets/imagenGrande.jpg');
+
+//Maps
+$my-font-sizes:(
+    xs: 1.5em,
+    sm: 2.25em,
+    md: 5em,
+    xl: 10em,
+);
+@each $formato, $talle in $my-font-sizes{
+    .fontSize-#{$formato}{
+        font-size: $talle;
+    }
+}

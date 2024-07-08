@@ -1,0 +1,14 @@
+@mixin widHei ($width, $height){
+    height: $height;
+    width: $width;
+}
+
+@mixin padWid($padding,$width){
+    padding: $padding;
+    width:$width;
+}
+
+@mixin disFlex ($display,$flex-wrap){
+    display: $display;
+    flex-flow: $flex-wrap;
+}
