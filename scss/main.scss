@@ -1,15 +1,15 @@
 // Reset
-@import'./config/vars';
-@import'./config/mixins';
-@import './config/reset';
-@import './html';
+@import'./config/vars.scss';
+@import'./config/mixins.scss';
+@import './config/reset.scss';
+@import './_html';
 
 //@import './mixin';
 
 // Layout
-@import './cabeza';
-@import './principal';
-@import './pie';
+@import './cabeza.scss';
+@import './principal.scss';
+@import './pie.scss';
 
 // Media queries
-@import './mq';
+@import './mq.scss';
