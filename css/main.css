@@ -1,9 +1,15 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 5 | @import './html.scss';
- *   |         ^^^^^^^^^^^^^
- *   '
- *   scss/main.scss 5:9  root stylesheet */
+/* Error: Missing argument $display.
+ *    ,--> scss/_principal.scss
+ * 37 |         @include disFlex;
+ *    |         ^^^^^^^^^^^^^^^^ invocation
+ *    '
+ *    ,--> scss/config/_mixins.scss
+ * 11 | @mixin disFlex ($display,$flex-wrap){
+ *    |        ============================= declaration
+ *    '
+ *   scss/_principal.scss 37:9  disFlex()
+ *   scss/_principal.scss 37:9  @import
+ *   scss/main.scss 10:9        root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +19,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 5 \2502  @import './html.scss';\a   \2502          ^^^^^^^^^^^^^\a   \2575 \a   scss/main.scss 5:9  root stylesheet";
+  content: "Error: Missing argument $display.\a    \250c \2500 \2500 > scss/_principal.scss\a 37 \2502          @include disFlex;\a    \2502          ^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > scss/config/_mixins.scss\a 11 \2502  @mixin disFlex ($display,$flex-wrap){\a    \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   scss/_principal.scss 37:9  disFlex()\a   scss/_principal.scss 37:9  @import\a   scss/main.scss 10:9        root stylesheet";
 }
