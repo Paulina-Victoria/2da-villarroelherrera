@@ -1,9 +1,6 @@
 footer{
     grid-area: footer;
-}
-
-.pie{
-    @include disFlex (flex,wrap);
+    @include disFlex;
     background-color: #090a0a;
     color: #f0edede0;
     justify-content: space-around;
