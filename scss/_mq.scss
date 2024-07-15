@@ -1,26 +1,25 @@
 @media (min-width: 992px){
     .menu {
-    position: absolute;
-    right: 5px
+        position: absolute;
+        right: 5px
     }
 }
 
 @media (max-width: 768px) {
-
     .title-primary{
         font-size: map-get($my-font-sizes, md);
     }
     .contenedor-card{
         width: 10em;
-    }
-    .contenedor-card img{
-        height:10em;
-    }
-    .contenedor-card-principal{
-        width:30em;    
-    }
-    .contenedor-card-principal img{
-        height:10em;
+            & img{
+                height:10em;
+            }
+        &-card-principal{
+            width:30em;
+            & img{
+                height:10em;
+            }
+        }
     }
 }
 
@@ -31,17 +30,17 @@
     }
     .contenedor-card{
         width: 15em;
+        & img{
+            height:10em;
+        }
+        &-card-principal{
+            width:15em;    
+            & img{
+                height:10em;
+            }
+        }
     }
-    .contenedor-card img{
-        height:10em;
-    }
-    .contenedor-card-principal{
-        width:15em;    
-    }
-    .contenedor-card-principal img{
-        height:10em;
-    }
-    .pie img{
+    footer img{
         display: none;
     }
 }

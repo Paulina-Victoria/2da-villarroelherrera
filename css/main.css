@@ -1,23 +1,368 @@
-/* Error: Missing argument $display.
- *    ,--> scss/_principal.scss
- * 37 |         @include disFlex;
- *    |         ^^^^^^^^^^^^^^^^ invocation
- *    '
- *    ,--> scss/config/_mixins.scss
- * 11 | @mixin disFlex ($display,$flex-wrap){
- *    |        ============================= declaration
- *    '
- *   scss/_principal.scss 37:9  disFlex()
- *   scss/_principal.scss 37:9  @import
- *   scss/main.scss 10:9        root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Missing argument $display.\a    \250c \2500 \2500 > scss/_principal.scss\a 37 \2502          @include disFlex;\a    \2502          ^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > scss/config/_mixins.scss\a 11 \2502  @mixin disFlex ($display,$flex-wrap){\a    \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   scss/_principal.scss 37:9  disFlex()\a   scss/_principal.scss 37:9  @import\a   scss/main.scss 10:9        root stylesheet";
+.fontSize-xs {
+  font-size: 1.5em;
 }
+
+.fontSize-sm {
+  font-size: 2.25em;
+}
+
+.fontSize-md {
+  font-size: 5em;
+}
+
+.fontSize-xl {
+  font-size: 10em;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+header .cont-menu {
+  width: 100%;
+  background-color: #090a0a;
+}
+header .cont-menu .w-img {
+  padding: 5px;
+  width: 120px;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+header .cont-menu .w-img:hover {
+  transform: scale(1.5);
+}
+header .cont-menu .menu {
+  justify-content: space-evenly;
+  width: 50%;
+}
+header .cont-menu .menu-current {
+  text-decoration: underline;
+  color: #f6f6f8;
+}
+header .cont-menu .menu-other {
+  text-decoration: none;
+  color: #f6f6f8;
+}
+header .cont-menu .menu:li {
+  list-style: none;
+}
+header .nav-p {
+  justify-content: space-evenly;
+}
+
+main {
+  grid-area: main;
+  flex: 1;
+}
+main .bg-banner {
+  background-image: url("../assets/imagenGrande.jpg");
+  background-position: top;
+  background-size: cover;
+  height: 300px;
+}
+main .title-primary {
+  color: rgba(240, 237, 237, 0.8784313725);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+main .title-second {
+  margin: 1em;
+  text-align: center;
+}
+main .m-top {
+  margin-top: 1em;
+}
+main .m-bottom {
+  margin-bottom: 1em;
+}
+main .card-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+main .card-container .card {
+  flex-direction: row;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #28d6f1;
+}
+main .card-container .card.reverse {
+  flex-direction: row-reverse;
+}
+main .card-container .card img {
+  width: 30%;
+  object-fit: cover;
+}
+main .card-container .card-text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .card-container .card-text h2 {
+  margin: 0 0 10px;
+}
+main .card-container .card-text p {
+  margin: 0;
+}
+main .card-container .card .description {
+  color: #1e1e1e;
+  margin: 1em;
+  text-align: justify;
+}
+main .boton-contacto {
+  padding: 3em;
+  width: 100%;
+}
+main .boton-contacto .btn-primario {
+  color: #212529;
+  background-color: #7cc;
+  border-color: #5bc2c2;
+}
+main .boton-contacto .btn:hover {
+  color: #212529;
+  background-color: #52bebe;
+  border-color: #8ad3d3;
+}
+main .content-blog {
+  padding: 40px 20px;
+}
+main .content-blog .featured-article {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px 8px 0px 0px;
+}
+main .content-blog .featured-article img {
+  height: 20em;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+main .content-blog .featured-article img:hover {
+  transform: scale(1.1);
+}
+main .content-blog .article-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 15px;
+  text-align: left;
+}
+main .content-blog .article-info h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+main .content-blog .article-info p {
+  margin: 0;
+  font-size: 0.9em;
+}
+main .content-blog .article-text {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 0px 0px 8px 8px;
+}
+main .content-blog .article-preview {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px 8px 0px 0px;
+  margin-top: 20px;
+}
+main .content-blog .article-preview img {
+  height: 15em;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+main .content-blog .article-preview img:hover {
+  transform: scale(1.1);
+}
+main .content-blog .article-preview-text {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 0px 0px 8px 8px;
+}
+main .content-blog .description-blog {
+  margin: 1em;
+  text-align: justify;
+}
+main .content-blog .description-blog a {
+  color: #212529;
+  text-decoration: none;
+}
+main .content-blog .description-blog a:hover {
+  color: #3227cc;
+  text-decoration: underline;
+}
+main .content-blog .excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .title-contacto {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+main .contenedor-contacto {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main .contenedor-contacto .box {
+  border: 1px solid #28d6f1;
+  height: 230px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+main .contenedor-contacto .box p {
+  text-align: center;
+}
+main .contenedor-contacto .box p a {
+  color: #212529;
+  text-decoration: none;
+}
+main .contenedor-contacto .box p a:hover {
+  color: #3227cc;
+  text-decoration: underline;
+}
+main .contenedor-contacto .box i {
+  color: #212529;
+  font-size: 100px;
+}
+main .contenedor-contacto .box i:hover {
+  color: #28d6f1;
+}
+main .content-nosotros {
+  padding: 40px 20px;
+  text-align: center;
+}
+main .content-nosotros h1 {
+  margin-bottom: 40px;
+}
+main .content-nosotros h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  color: #28d6f1;
+}
+main .content-nosotros p {
+  color: #555;
+}
+main .content-servicios {
+  padding: 40px 20px;
+  justify-content: space-evenly;
+  text-align: center;
+}
+main .content-servicios .service {
+  margin-bottom: 40px;
+  border-radius: 16px;
+  border: 1px solid #28d6f1;
+}
+main .content-servicios h1 {
+  margin-bottom: 40px;
+}
+main .content-servicios p {
+  color: #555;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-flow: wrap;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-flow: wrap;
+  background-color: #090a0a;
+  color: rgba(240, 237, 237, 0.8784313725);
+  justify-content: space-around;
+  align-items: center;
+}
+footer .m-img {
+  width: 70px;
+  padding-left: 5px;
+}
+footer .btn-wsp {
+  width: 27px;
+  bottom: 5px;
+  right: 5px;
+}
+
+@media (min-width: 992px) {
+  .menu {
+    position: absolute;
+    right: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .title-primary {
+    font-size: 5em;
+  }
+  .contenedor-card {
+    width: 10em;
+  }
+  .contenedor-card img {
+    height: 10em;
+  }
+  .contenedor-card-card-principal {
+    width: 30em;
+  }
+  .contenedor-card-card-principal img {
+    height: 10em;
+  }
+}
+@media (max-width: 478px) {
+  .title-primary {
+    font-size: 5em;
+  }
+  .contenedor-card {
+    width: 15em;
+  }
+  .contenedor-card img {
+    height: 10em;
+  }
+  .contenedor-card-card-principal {
+    width: 15em;
+  }
+  .contenedor-card-card-principal img {
+    height: 10em;
+  }
+  footer img {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

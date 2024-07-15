@@ -1,170 +1,257 @@
 main{
     grid-area: main;
+    flex: 1;
+
+    .bg-banner{
+        background-image: $background-image-index;
+        background-position: top;
+        background-size: cover;
+        height: 300px;
+    }
+
+    .title{
+        &-primary{
+            color: $color-primary-title;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        &-second{
+            margin: 1em;
+            text-align: center;  
+        }
+    }
+
+    .m{
+        &-top{
+        margin-top: 1em;
+        }
+        &-bottom{
+            margin-bottom: 1em;
+        }
+    }
+
+    //INDEX
+    .card-container {
+        @include disFlex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 20px;
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto;
+        .card {
+            flex-direction: row;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid $color-primary;
+            &.reverse {
+                flex-direction: row-reverse;
+            }
+            & img {
+                width: 30%;
+                object-fit: cover;
+            }
+            &-text {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                & h2 {
+                    margin: 0 0 10px;
+                }
+                & p {
+                    margin: 0;
+                }
+            }
+            .description{
+                color: #1e1e1e;
+                margin: 1em;
+                text-align: justify;
+            }
+        }
+    }
+
+    //INDEX
+    .boton-contacto{
+        @include padWid(3em,100%);
+        .btn{
+            &-primario {
+            color: $color-text;
+            background-color: $color-button-background;
+            border-color: $color-button-border;
+            }
+            &:hover {
+                color: $color-text;
+                background-color: $color-button-background-hover;
+                border-color: $color-button-border-hover;
+            }
+        }
+    }
+
+    //BLOG
+    .content-blog {
+        padding: 40px 20px;
+        
+        .featured-article {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px 8px 0px 0px;
+            & img {
+                @include widHei(100%,20em);
+                object-fit:cover;
+                transition: transform 0.3s ease;      
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .article-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 15px;
+            text-align: left;
+            & h3 {
+                margin: 0;
+                font-size: 1.5em;
+            }
+            & p {
+                margin: 0;
+                font-size: 0.9em;
+            }
+        }
+        .article-text {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 0px 0px 8px 8px;
+        }
+        
+        .article-preview {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px 8px 0px 0px;
+            margin-top: 20px;
+            & img {
+                @include widHei(100%,15em);
+                object-fit:cover;
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            &-text {
+                padding: 20px;
+                background-color: #f8f9fa;
+                border-radius: 0px 0px 8px 8px;
+            }
+        }
+
+        .description-blog{
+            margin: 1em;
+            text-align: justify;
+            & a{
+                color: $color-text;
+                text-decoration: none;
+                &:hover {
+                    color: $color-text-hover;
+                    text-decoration: underline;
+                }
+            }      
+        }
+        .excerpt {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    // CONTACTO
+    .title-contacto{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .contenedor-contacto{
+        @include disFlex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .box {
+            border: 1px solid $color-primary;
+            @include widHei(200px,230px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 8px; 
+            padding: 10px; 
+            box-sizing: border-box;
+            & p {
+                text-align: center;
+                & a {
+                    color: $color-text;
+                    text-decoration: none;
+                        &:hover {
+                            color: $color-text-hover;
+                            text-decoration: underline;
+                        }
+                    }         
+            }
+            & i {
+                color: $color-text;
+                font-size: 100px; 
+                &:hover {
+                    color:$color-primary;
+                }
+            }
+        }
+    }
+    // NOSOTROS
+    .content-nosotros {
+        padding: 40px 20px;
+        text-align: center;
+
+        & h1 {
+            margin-bottom: 40px;
+        }
+        & h2 {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 1.5em;
+            color: $color-primary;          
+        }
+        & p {
+            color: $color-text-secundary;
+        }
+    }
+
+    // SERVICIOS
+    .content-servicios {
+        padding: 40px 20px;
+        justify-content: space-evenly;
+        text-align: center;
+        .service {
+            margin-bottom: 40px;
+            border-radius: 16px;
+            border: 1px solid $color-primary;
+        }
+        & h1 {
+            margin-bottom: 40px;
+        }
+        & p {
+            color: $color-text-secundary;
+        }
+    }
 }
 
 aside{
     grid-area: aside;
-    @include disFlex (flex,wrap);
-}
-
-.bg-banner{
-    background-image: $background-image-index;
-    background-position: top;
-    background-size: cover;
-    height: 300px;
-}
-
-.title{
-    &-primary{
-        color: $color-primary-title;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    &-second{
-        margin: 1em;
-        text-align: center;  
-    }
-}
-
-.m{
-    &-top{
-    margin-top: 1em;
-    }
-    &-bottom{
-        margin-bottom: 1em;
-    }
-}
-
-//INDEX
-.card-container {
-    @include disFlex (flex,wrap);
-    justify-content: space-evenly;
-    flex-direction: column;
-    gap: 20px;
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    .card {
-        flex-direction: row;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        border: 1px solid $color-primary;
-        &.reverse {
-            flex-direction: row-reverse;
-        }
-        & img {
-            width: 30%;
-            object-fit: cover;
-        }
-        &-text {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            & h2 {
-                margin: 0 0 10px;
-            }
-            & p {
-                margin: 0;
-            }
-        }
-        .description{
-            color: #1e1e1e;
-            margin: 1em;
-            text-align: justify;
-        }
-    }
-}
-
-//INDEX
-.aside-nota{
-    @include padWid(3em,100%);
-    .btn{
-        &-primario {
-        color: $color-text;
-        background-color: $color-button-background;
-        border-color: $color-button-border;
-        }
-        &:hover {
-            color: $color-text;
-            background-color: $color-button-background-hover;
-            border-color: $color-button-border-hover;
-        }
-    }
-}
-
-//BLOG
-.contenedor{
-    @include disFlex (flex,wrap);
-    justify-content: space-evenly;
-    &-card{
-        width: 15em;
-        border-radius: 16px;
-        border: 1px solid $color-primary;
-        overflow: hidden;
-        & img{
-            @include widHei(100%,10em);
-            overflow: hidden;
-            object-fit:cover;
-        }
-    }
-    &-card-principal{
-        width:50em;    
-        border-radius: 16px;
-        border: 1px solid $color-primary;
-        grid-area: contenedor-card-principal;
-        overflow: hidden;
-        & img{
-            @include widHei(100%,15em);
-            overflow: hidden;
-            object-fit:cover;
-        }
-    }    
-    .description-blog{
-        margin: 1em;
-        text-align: justify;
-        & a{
-            color: $color-text;
-            text-decoration: none;
-            &:hover {
-                color: $color-text-hover;
-                text-decoration: underline;
-            }
-        }      
-    }
-    .excerpt {
-        display: -webkit-box;
-        -webkit-line-clamp: 10;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
-
-// CONTACTO
-.box {
-    border: 1px solid $color-primary;
-    @include widHei(300px,400px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    border-radius: 8px; 
-    padding: 10px; 
-    box-sizing: border-box;
-    & img {
-        @include widHei(50px,50px);
-        margin-bottom: 10px; 
-    }
-    & p {
-        margin: 0;
-        text-align: center; 
-        margin-top: 10px; 
-    }
-    & i {
-        color: white; 
-    }
+    @include disFlex;
 }

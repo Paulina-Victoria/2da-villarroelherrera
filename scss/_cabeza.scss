@@ -1,9 +1,7 @@
 header {
-    display: flex;
     grid-area: header;
     .cont-menu{
         width: 100%;
-        display: flex;
         background-color: $color-menu-background;
         .w-img{
             @include padWid (5px,120px);
@@ -14,7 +12,6 @@ header {
             }
         }
         .menu{
-            display: flex;
             justify-content: space-evenly;
             width: 50%;
             &-current{
@@ -31,7 +28,6 @@ header {
         }
     }
     .nav-p{
-        display: flex;
         justify-content: space-evenly;
     }
 }

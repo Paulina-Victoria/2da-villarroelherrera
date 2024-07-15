@@ -8,7 +8,7 @@
     width:$width;
 }
 
-@mixin disFlex ($display,$flex-wrap){
-    display: $display;
-    flex-flow: $flex-wrap;
+@mixin disFlex{
+    display:flex;
+    flex-flow: wrap;
 }
