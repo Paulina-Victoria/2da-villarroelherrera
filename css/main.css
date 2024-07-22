@@ -105,6 +105,9 @@ main .card-container .card {
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #28d6f1;
+  color: #212529;
+  margin: 1em;
+  text-align: justify;
 }
 main .card-container .card.reverse {
   flex-direction: row-reverse;
@@ -118,6 +121,7 @@ main .card-container .card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  display: inline;
 }
 main .card-container .card-text h2 {
   margin: 0 0 10px;
@@ -125,21 +129,16 @@ main .card-container .card-text h2 {
 main .card-container .card-text p {
   margin: 0;
 }
-main .card-container .card .description {
-  color: #1e1e1e;
-  margin: 1em;
-  text-align: justify;
-}
-main .boton-contacto {
+main .card-container .boton-contacto {
   padding: 3em;
   width: 100%;
 }
-main .boton-contacto .btn-primario {
+main .card-container .boton-contacto .btn-primario {
   color: #212529;
   background-color: #7cc;
   border-color: #5bc2c2;
 }
-main .boton-contacto .btn:hover {
+main .card-container .boton-contacto .btn:hover {
   color: #212529;
   background-color: #52bebe;
   border-color: #8ad3d3;
