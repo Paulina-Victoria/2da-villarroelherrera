@@ -218,7 +218,6 @@ main{
     .content-nosotros {
         padding: 40px 20px;
         text-align: center;
-
         & h1 {
             margin-bottom: 40px;
         }
@@ -237,20 +236,22 @@ main{
     .content-servicios {
         padding: 40px 20px;
         justify-content: space-evenly;
-        text-align: center;
+        text-align: justify;
+        & h1 {
+            margin-bottom: 40px;
+        }
         .service {
             margin-bottom: 40px;
             border-radius: 16px;
             border: 1px solid $color-primary;
-        }
-        & h1 {
-            margin-bottom: 40px;
-        }
-        & h2 {
-            color: $color-primary-text;
+            & h2 {
+                color: $color-primary-text;
+            }
         }
         & p {
             color: $color-text-secundary;
+            margin: 2em;
+            margin-bottom: 40px;
         }
     }
 }

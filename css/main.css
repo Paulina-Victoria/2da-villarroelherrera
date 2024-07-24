@@ -286,21 +286,23 @@ main .content-nosotros p {
 main .content-servicios {
   padding: 40px 20px;
   justify-content: space-evenly;
-  text-align: center;
+  text-align: justify;
+}
+main .content-servicios h1 {
+  margin-bottom: 40px;
 }
 main .content-servicios .service {
   margin-bottom: 40px;
   border-radius: 16px;
   border: 1px solid #28d6f1;
 }
-main .content-servicios h1 {
-  margin-bottom: 40px;
-}
-main .content-servicios h2 {
+main .content-servicios .service h2 {
   color: #0B5D6A;
 }
 main .content-servicios p {
   color: #555;
+  margin: 2em;
+  margin-bottom: 40px;
 }
 
 aside {
