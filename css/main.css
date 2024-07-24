@@ -37,6 +37,7 @@ header .cont-menu {
 header .cont-menu .w-img {
   padding: 5px;
   width: 120px;
+  height: auto;
   transition-duration: 0.5s;
   transition-delay: 0s;
 }

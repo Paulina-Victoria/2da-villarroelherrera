@@ -5,6 +5,7 @@ header {
         background-color: $color-menu-background;
         .w-img{
             @include padWid (5px,120px);
+            height: auto;
             transition-duration: 0.5s;
             transition-delay: 0s;
             &:hover {
