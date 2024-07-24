@@ -246,6 +246,9 @@ main{
         & h1 {
             margin-bottom: 40px;
         }
+        & h2 {
+            color: $color-primary-text;
+        }
         & p {
             color: $color-text-secundary;
         }

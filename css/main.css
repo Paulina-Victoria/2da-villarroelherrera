@@ -295,6 +295,9 @@ main .content-servicios .service {
 main .content-servicios h1 {
   margin-bottom: 40px;
 }
+main .content-servicios h2 {
+  color: #0B5D6A;
+}
 main .content-servicios p {
   color: #555;
 }
