@@ -170,7 +170,11 @@ main .content-blog .article-info {
   padding: 10px 15px;
   text-align: left;
 }
-main .content-blog .article-info h3 {
+main .content-blog .article-info h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+main .content-blog .article-info h4 {
   margin: 0;
   font-size: 1.5em;
 }
@@ -273,7 +277,7 @@ main .content-nosotros h2 {
   margin-top: 40px;
   margin-bottom: 40px;
   font-size: 1.5em;
-  color: #28d6f1;
+  color: #12a4ba;
 }
 main .content-nosotros p {
   color: #555;
@@ -286,7 +290,7 @@ main .content-servicios {
 main .content-servicios .service {
   margin-bottom: 40px;
   border-radius: 16px;
-  border: 1px solid #12a4ba;
+  border: 1px solid #28d6f1;
 }
 main .content-servicios h1 {
   margin-bottom: 40px;

@@ -114,7 +114,11 @@ main{
             color: white;
             padding: 10px 15px;
             text-align: left;
-            & h3 {
+            & h2 {
+                margin: 0;
+                font-size: 1.5em;
+            }
+            & h4 {
                 margin: 0;
                 font-size: 1.5em;
             }
@@ -222,7 +226,7 @@ main{
             margin-top: 40px;
             margin-bottom: 40px;
             font-size: 1.5em;
-            color: $color-primary;          
+            color: $color-primary-text;          
         }
         & p {
             color: $color-text-secundary;
@@ -237,7 +241,7 @@ main{
         .service {
             margin-bottom: 40px;
             border-radius: 16px;
-            border: 1px solid $color-primary-text;
+            border: 1px solid $color-primary;
         }
         & h1 {
             margin-bottom: 40px;
